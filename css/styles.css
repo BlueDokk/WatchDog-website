@@ -14,12 +14,26 @@
   padding: 0;
 }
 
-/* BASE STYLES */
+/**********************************************/
+/*                 BASE STYLES                 /
+/**********************************************/
 img {
   width: 100%;
 }
 
-/* TYPOGRAPHYC */
+hr {
+  background-color: var(--color-body);
+}
+
+@media screen and (min-width: 768px) {
+  hr {
+    display: none;
+  }
+}
+
+/**********************************************/
+/*                 TYPOGRAPHYC                 /
+/**********************************************/
 
 html {
   font-size: 62.5%;
@@ -59,11 +73,6 @@ p {
   margin-top: 0;
 }
 
-/* .text-paragraph {
-  font-size: 1.7rem;
-  color: var(--color-body);
-} */
-
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -87,13 +96,15 @@ a {
   text-decoration: none;
 }
 
-/* LIST */
+/**********************************************/
+/*                     LIST                    /
+/**********************************************/
 .list {
   list-style: none;
   padding: 0;
 }
 .list--tick {
-  /* list-style-image: url(../images/check-list.svg); */
+  margin: 2rem 0;
   padding-left: 3rem;
   color: #000;
 }
@@ -103,22 +114,19 @@ a {
   background-size: 20px;
   margin-bottom: 1rem;
   padding-left: 3rem;
+  line-height: 20px;
 }
 
-@media screen and (min-width: 1024px) {
-  .list--tick .list__item {
-    padding-left: 0;
-  }
-}
-
-/* ICONS */
+/**********************************************/
+/*                    ICONS                    /
+/**********************************************/
 .icon {
   width: 40px;
   height: 40px;
 }
 .icon--large {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 }
 .icon--white {
   color: #fff;
@@ -150,8 +158,8 @@ a {
 }
 
 .block__circle {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border: 2px solid var(--color-headings);
   border-radius: 50%;
   display: flex;
@@ -168,23 +176,36 @@ a {
   grid-gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  margin: 4rem 0;
+  margin: 6rem 0 4rem 0;
 }
 
 @media screen and (min-width: 768px) {
   .grid--icon {
     grid-template-columns: repeat(4, 1fr);
+    margin: 8rem 0 4rem 0;
   }
+
+  .icon--large {
+    width: 80px;
+    height: 80px;
+  }
+
   .icon--group:nth-of-type(odd) {
     padding-left: 0;
   }
-
   .icon--group:nth-of-type(even) {
     padding-right: 0;
   }
+
+  .block__circle {
+    width: 120px;
+    height: 120px;
+  }
 }
 
-/* Buttons */
+/**********************************************/
+/*                   BUTTONS                   /
+/**********************************************/
 .btn {
   border-radius: 40px;
   border: 0;
@@ -344,19 +365,6 @@ a {
   margin-bottom: 2rem;
 }
 
-.plan--popular .card__header {
-  position: relative;
-}
-
-.plan--popular .card__header::before {
-  content: url(../images/popular.svg);
-  width: 40px;
-  display: inline-block;
-  position: absolute;
-  top: -6px;
-  right: 5%;
-}
-
 .plan:hover {
   transform: scale(1.05);
 }
@@ -385,10 +393,6 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
-}
-
-.block--plans {
-  padding: 0;
 }
 
 .block--plans .grid {
@@ -435,9 +439,15 @@ a {
   opacity: 1;
 }
 
-/* BLOCKS */
+/**********************************************/
+/*                    BLOCKS                   /
+/**********************************************/
 .block {
   padding: 6rem 4rem 1rem 4rem;
+}
+
+section.block--margin {
+  margin-bottom: 15rem;
 }
 
 .block__header {
@@ -588,12 +598,42 @@ a {
   }
 }
 
+/**********************************************/
+/*                    MEDIA                    /
+/**********************************************/
+#img-solutions {
+  margin-bottom: 5rem;
+  border: 5px solid var(--color-primary);
+  box-shadow: 0 0 20px 1px var(--color-primary);
+  border-radius: 10px;
+}
+
+.media {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.media__title {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  display: none;
+  margin-top: 1rem;
+}
+
 .point {
   clip-path: polygon(50% 50%, 0 0, 100% 0);
   background-color: var(--color-primary);
-  box-shadow: 10px 10px 10px 10px var(--color-primary);
   display: block;
   margin: 2rem auto;
   width: 45px;
   height: 35px;
+}
+.shadow-primary {
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
