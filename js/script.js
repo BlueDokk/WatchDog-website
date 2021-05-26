@@ -1,13 +1,28 @@
-// const collapsibles = document.querySelectorAll(".collapsible");
-// collapsibles.forEach((item) =>
-//   item.addEventListener("click", function () {
-//     this.classList.toggle("collapsible--expanded");
-//   })
-// );
 
-const btn_toggler = document.querySelector('.navbar__toggler');
-const navbar = document.querySelector('.navbar');
 
-btn_toggler.addEventListener('click', () => {
-    navbar.classList.toggle('collapsible--expanded');
-})
+var p = {
+
+    btnToggler: document.querySelector('.navbar__toggler'),
+    navbar: document.querySelector('.navbar'),
+
+}
+
+var m = {
+
+    startApp: () => {
+        m.collapse(p.btnToggler, p.navbar);
+    },
+
+    collapse: (element, target) => {
+        element.addEventListener("click", () => {
+            target.classList.toggle("collapsible--expanded");
+        })
+    },
+}
+
+
+m.startApp();
+
+
+
+
