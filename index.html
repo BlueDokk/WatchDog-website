@@ -1,17 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
+    <title>WatchDog</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
 
-    
-    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar collapsible">
+            <a class="navbar__brand" href="/"><img src="images/logo.png" alt="WatchDog logo" /></a>
+            <svg class="icon icon--white navbar__toggler">
+                <use href="./images/sprite.svg#bars-solid"></use>
+            </svg>
+            <ul class="list navbar__list collapsible__content">
+                <li class="navbar__item"><a href="#">Home</a></li>
+                <li class="navbar__item"><a href="#">Services</a></li>
+                <li class="navbar__item"><a href="#">About us</a></li>
+                <li class="navbar__item"><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="block block--dark block--skewed-left banner">
+        <div class="container grid grid--1x2">
+            <header class="block__header banner__content">
+                <h1 class="block__heading">
+                    Custom Business Security
+                </h1>
+                <p class="banner__tagline">
+                    Develop the best solutions for the
+                    security of your company.
+                </p>
+                <a href="" class="btn btn--primary btn--stretched">Get Started</a>
+            </header>
+            <picture>
+                <img class="banner__image" src="images/banner.png" alt="" />
+            </picture>
+        </div>
+    </section>
+    <section class="block container block-domain">
+        <header class="block__header">
+            <h2>The Integration Process</h2>
+            <span class="point"></span>
+            <p>
+                WatchDog™ provides the industry-specific
+                experience and technology to define
+                your needs, design, build, commission,
+                operate and maintain your
+                integrated security solution.
+            </p>
+            <div class="block--icon">
+                <div class="block__circle">
+                    <svg class="icon icon--large icon--secondary">
+                        <use href="./images/sprite.svg#lightbulb"></use>
+                    </svg>
+                </div>
+                
+                <div class="block__circle">
+                    <svg class="icon icon--secondary">
+                        <use href="./images/sprite.svg#edit"></use>
+                    </svg>
+                </div>
+                <div class="block__circle">
+                    <svg class="icon icon--secondary">
+                        <use href="./images/sprite.svg#tools-solid"></use>
+                    </svg>
+                </div>
+                <div class="block__circle">
+                    <svg class="icon icon--secondary">
+                        <use href="./images/sprite.svg#hand-heart"></use>
+                    </svg>
+                </div>
+
+            </div>
+        </header>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
