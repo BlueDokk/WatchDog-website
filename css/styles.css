@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-primary: #00D9FF;
+    --color-secondary: #00A4C0;
+    --color-headings: #1F2833;
+    --color-body:#848484;
+}
