@@ -495,6 +495,8 @@ a {
 /**********************************************/
 .block {
   padding: 6rem 4rem 1rem 4rem;
+  overflow: hidden;
+
 }
 
 section.block--margin--bottom {
