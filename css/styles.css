@@ -273,6 +273,12 @@ a {
   display: inline-block;
 }
 
+@media screen and (max-width: 380px) {
+  .btn {
+    padding: 1.8rem 6rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -496,7 +502,6 @@ a {
 .block {
   padding: 6rem 4rem 1rem 4rem;
   overflow: hidden;
-
 }
 
 section.block--margin--bottom {
