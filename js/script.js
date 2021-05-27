@@ -1,6 +1,7 @@
 var p = {
 
     btnToggler: document.querySelector('.navbar__toggler'),
+    collapsibles: document.querySelectorAll('.collapsible'),
     navbar: document.querySelector('.navbar'),
     btnUp: document.getElementById("button-up")
 
@@ -9,15 +10,24 @@ var p = {
 var m = {
 
     startApp: () => {
-        m.collapse(p.btnToggler, p.navbar);
+        m.collapseMenu(p.btnToggler, p.navbar);
+        m.collapse();
         m.scroll();
     },
 
-    collapse: (element, target) => {
+    collapseMenu: (element, target) => {
         element.addEventListener("click", () => {
             target.classList.toggle("collapsible--expanded");
         })
     },
+    collapse: () => {
+        p.collapsibles.forEach((item) => {
+            item.addEventListener('click', function () {
+                this.classList.toggle("collapsible--expanded");
+            })
+        })
+    },
+
     scrollUp: () => {
         var currentScroll = document.documentElement.scrollTop;
 

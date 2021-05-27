@@ -7,17 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WatchDog</title>
 
+    <meta name="author" content="Javier Velasquez">
+    <meta name="description" content="Website of WatchDog project">
+    <meta property="og:title" content="WatchDog">
+    <meta property="og:description" content="Website of WatchDog project">
+    <meta property="og:type" content="website">
+
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
 
 <body>
     <header>
-        <nav class="navbar collapsible">
+        <nav class="navbar">
             <a class="navbar__brand" href="/"><img src="images/logo.png" alt="WatchDog logo" /></a>
             <svg class="icon icon--white navbar__toggler">
                 <use href="./images/sprite.svg#bars-solid"></use>
@@ -33,7 +43,7 @@
     <section class="block block--dark block--skewed-left banner">
         <div class="container grid grid--1x2">
             <header class="block__header banner__content">
-                <h1 class="block__heading">
+                <h1 class="block__heading" data-aos="zoom-in">
                     Custom Business Security
                 </h1>
                 <p class="banner__tagline">
@@ -43,6 +53,8 @@
                 <a href="" class="btn btn--primary btn--stretched">Get Started</a>
             </header>
             <picture data-aos="zoom-in">
+                <source type="image/webp" srcset="images/banner.webp 1x, images/banner@2x.webp 2x" />
+                <source type="image/png" srcset="images/banner.png 1x, images/banner@2x.png 2x" />
                 <img class="banner__image" src="images/banner.png" alt="" />
             </picture>
         </div>
@@ -59,42 +71,42 @@
                 operate and maintain your
                 integrated security solution.
             </p>
-            <div class="grid--icon" data-aos="zoom-in">
-                <div class="icon--group icon--dark">
-                    <div class="block__circle">
-                        <svg class="icon icon--large icon--secondary">
-                            <use href="./images/sprite.svg#lightbulb"></use>
-                        </svg>
-                    </div>
-                    <p class="label--dark">DEFINE</p>
-                </div>
-
-                <div class="icon--group icon--dark">
-                    <div class="block__circle">
-                        <svg class="icon icon--large">
-                            <use href="./images/sprite.svg#edit"></use>
-                        </svg>
-                    </div>
-                    <p class="label--dark">DESIGN</p>
-                </div>
-                <div class="icon--group icon--dark">
-                    <div class="block__circle">
-                        <svg class="icon icon--large">
-                            <use href="./images/sprite.svg#tools-solid"></use>
-                        </svg>
-                    </div>
-                    <p class="label--dark">BUILD</p>
-                </div>
-                <div class="icon--group icon--dark">
-                    <div class="block__circle">
-                        <svg class="icon icon--large">
-                            <use href="./images/sprite.svg#hand-heart"></use>
-                        </svg>
-                    </div>
-                    <p class="label--dark">BUILD</p>
-                </div>
-            </div>
         </header>
+        <div class="grid--icon" data-aos="zoom-in">
+            <div class="icon--group icon--dark">
+                <div class="block__circle">
+                    <svg class="icon icon--large icon--secondary">
+                        <use href="./images/sprite.svg#lightbulb"></use>
+                    </svg>
+                </div>
+                <p class="label--dark">DEFINE</p>
+            </div>
+
+            <div class="icon--group icon--dark">
+                <div class="block__circle">
+                    <svg class="icon icon--large">
+                        <use href="./images/sprite.svg#edit"></use>
+                    </svg>
+                </div>
+                <p class="label--dark">DESIGN</p>
+            </div>
+            <div class="icon--group icon--dark">
+                <div class="block__circle">
+                    <svg class="icon icon--large">
+                        <use href="./images/sprite.svg#tools-solid"></use>
+                    </svg>
+                </div>
+                <p class="label--dark">BUILD</p>
+            </div>
+            <div class="icon--group icon--dark">
+                <div class="block__circle">
+                    <svg class="icon icon--large">
+                        <use href="./images/sprite.svg#hand-heart"></use>
+                    </svg>
+                </div>
+                <p class="label--inherit">BUILD</p>
+            </div>
+        </div>
         <hr>
     </section>
 
@@ -179,19 +191,22 @@
             <p>It is a long established fact that a reader
                 will be distracted by the readable content.</p>
         </header>
-        <div class="container grid grid--1x2">
+        <div class="container grid grid--custom">
 
-            <img data-aos="zoom-in-left" id="img-solutions" src="images/custom-solutions.jpg" alt="Custom solutions" />
+            <picture data-aos="zoom-in-left">
+                <source type="image/webp" srcset="images/custom-solutions.webp 1x, custom-solutions@2x.webp 2x" />
+                <source type="image/png" srcset="images/custom-solutions.png 1x, custom-solutions@2x.png 2x" />
+                <img id="img-solutions" src="images/custom-solutions.jpg" alt="Custom solutions" />
+            </picture>
+
 
             <ul class="list">
                 <li data-aos="fade-right">
                     <div class="media">
-                        <div class="media__image">
-                            <svg class="icon icon--primary">
-                                <use href="images/sprite.svg#snap"></use>
-                            </svg>
+                        <div class="media__image icon--large">
+                            <img src="./images/camera.svg" alt="">
                         </div>
-                        <div class="media__body">
+                        <div class="media__body text-left">
                             <h3 class="media__title">Lorem Ipsum is Simp</h3>
                             <p>
                                 Lorem Ipsum is simply dummy
@@ -204,12 +219,7 @@
                 </li>
                 <li data-aos="fade-left">
                     <div class="media">
-                        <div class="media__image">
-                            <svg class="icon icon--primary">
-                                <use href="images/sprite.svg#growth"></use>
-                            </svg>
-                        </div>
-                        <div class="media__body">
+                        <div class="media__body text-right">
                             <h3 class="media__title">Lorem Ipsum is Simp</h3>
                             <p>
                                 Lorem Ipsum is simply dummy
@@ -218,16 +228,17 @@
                                 Lorem Ipsum.
                             </p>
                         </div>
+                        <div class="media__image icon--large">
+                            <img src="./images/camera2.svg" alt="">
+                        </div>
                     </div>
                 </li>
                 <li data-aos="fade-right">
                     <div class="media">
-                        <div class="media__image">
-                            <svg class="icon icon--primary">
-                                <use href="images/sprite.svg#wordpress"></use>
-                            </svg>
+                        <div class="media__image icon--large">
+                            <img src="./images/camera3.svg" alt="">
                         </div>
-                        <div class="media__body">
+                        <div class="media__body text-left">
                             <h3 class="media__title">Lorem Ipsum is Simp</h3>
                             <p>
                                 Lorem Ipsum is simply dummy
@@ -251,7 +262,7 @@
                 will be distracted.
             </p>
         </header>
-        <div class="container" data-aos="zoom-in">
+        <div class="" data-aos="zoom-in">
             <div class="card testimonial">
                 <div class="grid grid--1x2">
                     <div class="testimonial__image"></div>
@@ -286,7 +297,7 @@
 
     <footer class="block block--dark footer">
         <div class="container grid footer__sections">
-            <section class="collapsible collapsible--expanded footer__section ">
+            <section class="collapsible footer__section ">
                 <div class="collapsible__header">
                     <h2 class="collapsible__heading footer__heading">PRODUCTS</h2>
                     <svg class="icon icon--white collapsible__chevron">
@@ -350,10 +361,10 @@
                     </ul>
                 </div>
             </section>
-            <div class="footer__brand">
-                <img src="./images/logo.png" alt="WatchDog logo" />
-                <p class="footer__copyright">Copyright &copy; 2021 WatchDog</p>
-            </div>
+        </div>
+        <div class="footer__brand">
+            <a class="navbar__brand" href="/"><img src="images/logo.png" alt="WatchDog logo" /></a>
+            <p class="footer__copyright">Copyright &copy; 2021 WatchDog</p>
         </div>
     </footer>
 
