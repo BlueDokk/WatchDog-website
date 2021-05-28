@@ -820,10 +820,10 @@ section.block--margin--top {
 }
 
 /**********************************************/
-/*                  BUTTON-UP                  /
+/*                  btn-up                  /
 /**********************************************/
 
-#button-up {
+#btn-up {
   width: 60px;
   height: 60px;
   background: var(--color-primary);
@@ -842,7 +842,7 @@ section.block--margin--top {
   transform: scale(0);
 }
 
-#button-up:hover {
+#btn-up:hover {
   transform: scale(2);
   border-color: rgba(0, 0, 0, 0.1);
 }
@@ -928,3 +928,14 @@ section.block--margin--top {
     font-size: 1.6rem;
   }
 }
+
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+

@@ -3,7 +3,7 @@ var p = {
     btnToggler: document.querySelector('.navbar__toggler'),
     collapsibles: document.querySelectorAll('.collapsible'),
     navbar: document.querySelector('.navbar'),
-    btnUp: document.getElementById("button-up")
+    btnUp: document.getElementById("btn-up")
 
 }
 
@@ -51,7 +51,7 @@ var m = {
 m.startApp();
 window.onscroll = m.scroll;
 
-document.getElementById("button-up").addEventListener("click", m.scrollUp);
+document.getElementById("btn-up").addEventListener("click", m.scrollUp);
 
 
 
